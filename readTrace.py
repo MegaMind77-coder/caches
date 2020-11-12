@@ -1,5 +1,5 @@
 import Conversions
-file1 = open("traces/gcc.trace", 'r')
+file1 = open("traces/twolf.trace", 'r')
 
 data = file1.readlines()
 

@@ -1,0 +1,17 @@
+missFlag = 1
+        for i in range(4):
+            if(SAcache[intIdx][i][0] == '1'):
+                if(SAcache[intIdx][i][1] == tagStr):
+                    missFlag = 0
+                    (SAcache[intIdx][4]).remove(i)
+                    (SAcache[intIdx][4]).append(i)
+                    hitCount += 1
+
+        if(missFlag == 1):
+            chBlock = SAcache[intIdx][4][0]
+            if(SAcache[intIdx][chBlock][0] == '0'):
+                SAcache[intIdx][chBlock][0] = '1'
+            SAcache[intIdx][chBlock][1] = tagStr
+            (SAcache[intIdx][4]).remove(chBlock)
+            (SAcache[intIdx][4]).append(chBlock)
+            missCount += 1
